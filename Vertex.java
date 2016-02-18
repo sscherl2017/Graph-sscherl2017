@@ -65,6 +65,16 @@ public class Vertex<E>
 		vert.getDestinations().add(new Edge<E>(this, cost));
 	}
 	
+	/* 
+	* Adds the given Vertex and cost to the ArrayList of Edges but it can only be traversed one way.
+	* @param	The Vertex that will be added
+	* @param	The cost of the Vertex that will be added
+	*/
+	public void addOneWayVertex(Vertex<E> vert, Integer cost)
+	{
+		destinations.add(new Edge<E>(vert, cost));
+	}
+	
 	/*
 	* Returns a String representation of the Vertex.
 	* @return	A String representation of the Vertex
